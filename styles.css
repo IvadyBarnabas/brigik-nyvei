@@ -1,10 +1,15 @@
 :root {
-    --bg: #fff8f3;
-    --primary: #d9a86c;
-    --accent: #f2d0a7;
-    --text: #4a3b2c;
-    --card-bg: #fff;
-    --shadow: rgba(0, 0, 0, 0.05);
+    --bg: #fef7f1;
+    --primary: #b47b4e;      /* kávébarna */
+    --accent: #f5d7b3;       /* világos karamell */
+    --text: #3e2f25;
+    --card-bg: #fffdf9;
+    --soft-border: #e6d3c1;
+    --shadow: rgba(0, 0, 0, 0.06);
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
   }
   
   * {
@@ -14,35 +19,43 @@
   }
   
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg);
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
   }
   
+  /* ======= CONTAINER ======= */
   .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 20px 0;
+    display: grid;
+    gap: 20px;
   }
   
   /* ======= HEADER ======= */
   header {
-    background: var(--primary);
-    color: #fff;
-    border-bottom: 4px solid #c39259;
+    background-color: var(--primary);
+    background-image: url('kepek/hatter.png');
+    color: white;
+    padding: 20px 0;
   }
   
   header .container {
-    display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    display: grid;
   }
   
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    letter-spacing: 1px;
   }
   
   nav ul {
@@ -53,45 +66,54 @@
   }
   
   nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 6px 14px;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
   }
   
   nav a:hover {
-    color: var(--accent);
+    background-color: white;
+    color: var(--primary);
+    transform: scale(1.05);
   }
   
   /* ======= HERO ======= */
   .hero {
-    background: var(--accent);
+    background-color: var(--accent);
     color: var(--text);
     padding: 80px 20px;
     text-align: center;
-    border-bottom: 3px solid #eacda3;
+    border-radius: 16px;
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
   }
   
   .hero h2 {
     font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-weight: bold;
   }
   
   .hero p {
     font-size: 1.2rem;
-    color: #5e4a38;
   }
   
-  /* ======= BOOKS ======= */
+  /* ======= BOOKS SECTION ======= */
   .books {
     padding: 60px 0;
+    display: grid;
+    gap: 40px;
   }
   
   .books h2 {
     text-align: center;
     font-size: 2rem;
     color: var(--primary);
-    margin-bottom: 40px;
   }
   
   .book-list {
@@ -101,13 +123,15 @@
   }
   
   .book {
-    background: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px var(--shadow);
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--shadow);
     overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     text-align: center;
-    padding-bottom: 15px;
-    transition: transform 0.2s;
+    border: 1px solid var(--soft-border);
+    transition: transform 0.2s ease;
   }
   
   .book:hover {
@@ -117,55 +141,86 @@
   .book img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #eee;
   }
   
   .book h3 {
-    font-size: 1.1rem;
     margin: 10px 0 5px;
+    font-size: 1.1rem;
     color: var(--text);
   }
   
   .book p {
     font-size: 0.95rem;
-    color: #6c5845;
+    color: #5c4a3c;
+    padding: 0 10px 10px;
   }
   
-  /* ======= ABOUT ======= */
+  /* ======= ABOUT SECTION ======= */
   .about {
-    background: #fff1e6;
+    background-color: #fceee1;
+    border-radius: 16px;
     padding: 60px 20px;
     text-align: center;
-    border-top: 3px dashed #eacda3;
+    display: grid;
+    gap: 20px;
   }
   
   .about h2 {
     font-size: 1.8rem;
     color: var(--primary);
-    margin-bottom: 20px;
   }
   
   .about p {
     max-width: 700px;
     margin: 0 auto;
-    color: #5e4a38;
+    color: #4a392e;
   }
   
   /* ======= FOOTER ======= */
   footer {
-    background: var(--primary);
-    color: #fff;
+    background-image: url('kepek/hatter.png');
+    background-color: var(--primary);
+    color: white;
     text-align: center;
     padding: 20px;
-    font-size: 0.9rem;
-    border-top: 4px solid #c39259;
+    font-size: 1rem;
+  }
+
+  footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+  }
+  footer a:hover{
+    opacity: 0.8;
   }
   
-  /* ======= RESPONSIVE ======= */
+  /* ======= RESPONSIVE MENU ======= */
   @media (max-width: 768px) {
     nav ul {
       grid-auto-flow: row;
       justify-items: center;
       gap: 10px;
     }
+  }
+
+  @keyframes growPulse {
+    0%, 100% {
+      transform: scale(1);
+      color: var(--primary);
+    }
+    50% {
+      transform: scale(1.1);
+      color: red;
+    }
+  }
+  
+  .highlight-text {
+    animation: growPulse 2s infinite ease-in-out;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
   }
