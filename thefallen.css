@@ -135,8 +135,19 @@
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 15px #ff1a1a33;
+    color: #ccc;
+    transition: transform 0.3s ease;
+  }
+  .karakter-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff1a1a66;
   }
   
   .karakter-card h3 {
     color: #ff1a1a;
   }
+  .karakter-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
