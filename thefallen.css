@@ -92,7 +92,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1c1c1c;
+    background: #181818;
     padding: 3rem 1rem;;
     padding: 2rem;
     border-radius: 10px;
@@ -104,7 +104,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1c1c1c;
+    background: #181818;
     padding: 3rem 1rem;;
     padding: 2rem;
     border-radius: 10px;
@@ -131,11 +131,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1c1c1c;
+    border-top: 2px solid #ff1a1a;
     padding: 3rem 1rem;;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 15px #ff1a1a3a;
     margin-top: 2rem;
   }
     footer a {
